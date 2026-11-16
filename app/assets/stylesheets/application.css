@@ -8,3 +8,67 @@
  *
  * Consider organizing styles into separate files for maintainability.
  */
+<!-- app/views/questions/answer.html.erb -->
+<div class="coach">
+  <h1>Stupid Coaching</h1>
+  <p class="answer">I don't care, get dressed and go to work!</p>
+  <a class="btn" href="/ask">Ask another question</a>
+</div>
+
+Puis le CSS (dans public/style.css par exemple, à lier dans ton layout avec <link rel="stylesheet" href="/style.css">) :
+
+css
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #1f2937, #111827);
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  color: #f9fafb;
+}
+
+.coach {
+  max-width: 480px;
+  padding: 40px;
+  text-align: center;
+  background: #1f2937;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+}
+
+h1 {
+  margin: 0 0 24px;
+  font-size: 2rem;
+  color: #fbbf24;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.answer {
+  margin: 0 0 32px;
+  font-size: 1.4rem;
+  font-style: italic;
+  line-height: 1.5;
+}
+
+.btn {
+  display: inline-block;
+  padding: 12px 24px;
+  background: #fbbf24;
+  color: #111827;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: transform 0.2s, background 0.2s;
+}
+
+.btn:hover {
+  background: #f59e0b;
+  transform: translateY(-2px);
+}
